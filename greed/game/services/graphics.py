@@ -32,7 +32,7 @@ class Graphics:
         if self._debug == True:
             self._draw_grid()
     
-    def draw_actor(self, actor):
+    def draw_participant(self, actor):
         """Draws the given actor's text on the screen.
 
         Args:
@@ -45,14 +45,14 @@ class Graphics:
         color = actor.get_color().to_tuple()
         pyray.draw_text(text, x, y, font_size, color)
         
-    def draw_actors(self, actors):
+    def draw_participants(self, actors):
         """Draws the text for the given list of actors on the screen.
 
         Args:
             actors (list): A list of actors to draw.
         """ 
         for actor in actors:
-            self.draw_actor(actor)
+            self.draw_participant(actor)
     
     def flush_buffer(self):
         """Copies the buffer contents to the screen. This method should be called at the end of

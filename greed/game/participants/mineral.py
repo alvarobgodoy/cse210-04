@@ -1,26 +1,31 @@
-# mineral(entity): hereda de la clase actor, atributo: puntos (negativos o positivos). Metodos: get_points y set_points.
+from game.participants.entity import Entity
 
 
-from entity import entity
-
-
-class mineral(entity):
-
-    def __init__(self):
-
-        self._is_rock=False
-
-        self._is_mineral= False 
+class Mineral(Entity):
+    """
+    An item of cultural or historical interest. 
     
+    The responsibility of an Artifact is to provide a message about itself.
 
-
-    def indentificador(self):
-        self.gema= super.get_gema()
-        self.roca=super.get_rock()
-
-        if select == self.gema:
-            self._is_mineral==True
-        else:
-            self._is_rock=True
-            self._is_mineral=False     
-
+    Attributes:
+        _message (string): A short description about the artifact.
+    """
+    def __init__(self):
+        super().__init__()
+        self._points = 0
+        
+    def get_points(self):
+        """Gets the artifact's message.
+        
+        Returns:
+            string: The message.
+        """
+        return self._points
+    
+    def set_points(self, points):
+        """Updates the message to the given one.
+        
+        Args:
+            message (string): The given message.
+        """
+        self._points = points

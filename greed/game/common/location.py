@@ -1,6 +1,3 @@
-
-
-
 class Location:
     '''This class is the represents the distance of the origin (0, 0)
     
